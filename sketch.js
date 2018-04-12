@@ -39,7 +39,7 @@ function draw() {
 	  image(mouse, 400, 460, 170, 170);
 	  image(owl, 470, 300, 170, 170);
 	  image(hill, 370, 120, 170, 170);
-	  image(wolf, 170, 90, 170, 170);
+	  image(wolf, 172, 90, 170, 170);
 
 	  text('What is consciousness?', 200, 350, 400, 600);
 	  textSize(20)
