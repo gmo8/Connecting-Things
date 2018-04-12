@@ -11,13 +11,40 @@ var eyeRight = 0;
 var jaw = 0;
 var nostrils = 0;
 
+
+
+function preload(){
+	bat = loadImage("pics/bat.png");
+	dog = loadImage("pics/dog.png");
+	hill = loadImage("pics/hill.png");
+	mouse = loadImage("pics/mouse.png");
+	owl = loadImage("pics/owl.png");
+	trump = loadImage("pics/trump.png");
+	wolf = loadImage("pics/wolf.png");
+
+}
+
 function setup() {
-  	createCanvas(500, 400);
+  	createCanvas(700, 700);
 	setupOsc(8338, 3334);
+
 }
 
 function draw() {
-  	background(255);
+	  background(66, 244, 161);
+	  
+	  image(bat, 5, 230, 170, 170);
+	  image(dog, 50, 400, 170, 170);
+	  image(trump, 200, 500, 170, 170);
+	  image(mouse, 400, 460, 170, 170);
+	  image(owl, 470, 300, 170, 170);
+	  image(hill, 370, 120, 170, 170);
+	  image(wolf, 170, 90, 170, 170);
+
+	  text('What is consciousness?', 200, 350, 400, 600);
+	  textSize(20)
+	  textStyle(ITALIC);
+	  
 
 	// FACE_OUTLINE : 0 - 16
 	// LEFT_EYEBROW : 17 - 21
@@ -28,13 +55,21 @@ function draw() {
 	// RIGHT_EYE : 42 - 47
 	// INNER_MOUTH : 48 - 59
 	// OUTER_MOUTH : 60 - 65
-	rectMode(CENTER);
+	//rectMode(CENTER);
 	//var mouth = map(mouthHeight, 1, 3, 0, 255);
 	//fill(mouth-120, mouth+120, 0);
 	//ellipse(position.x, position.y, 100, 100);
-	var wink = map(eyeLeft, 1, 3, 0, 255);
-	fill(wink-120, wink+120, 0);
-	ellipse(position.x, position.y, 100, 100)
+
+	var wink = map(eyeLeft, 1, 3, 100, 300);
+	fill(wink-120, wink+120, 250);
+	ellipse(position.x, position.y, 15, 15);
+
+	var wink2 = map(eyeRight, 1, 3, 100, 300);
+	fill(wink2-120, wink2+120, 250);
+	ellipse(position.x+35, position.y, 15, 15);
+
+	
+
 
 }
 
@@ -59,7 +94,7 @@ function receiveOsc(address, value) {
 	}
 	else if (address == '/gesture/mouth/height') {
 		mouthHeight = value[0];
-		print(mouthHeight);
+		//print(mouthHeight);
 	}
 	else if (address == '/gesture/eyebrow/left') {
 		eyebrowLeft = value[0];
@@ -69,10 +104,11 @@ function receiveOsc(address, value) {
 	}
 	else if (address == '/gesture/eye/left') {
 		eyeLeft = value[0];
-		//map(eyeLeft);
+		//print(eyeLeft);
 	}
 	else if (address == '/gesture/eye/right') {
 		eyeRight = value[0];
+		//print(eyeRight);
 	}
 	else if (address == '/gesture/jaw') {
 		jaw = value[0];
