@@ -44,7 +44,22 @@ function draw() {
 	  text('What is consciousness?', 200, 350, 400, 600);
 	  textSize(20)
 	  textStyle(ITALIC);
-	  
+
+	  fill(1);
+	ellipse(60,350,15,15);
+	ellipse(80,350,15,15);
+	ellipse(130,435,15,15);
+	ellipse(155,435,15,15);
+	ellipse(277,540,15,15);
+	ellipse(302,540,15,15);
+	ellipse(485,510,15,15);
+	ellipse(452,510,15,15);
+	ellipse(570,380,15,15);
+	ellipse(525,380,15,15);
+	ellipse(455,170,15,15);
+	ellipse(430,170,15,15);
+	ellipse(235,170,15,15);
+	ellipse(265,170,15,15);
 
 	// FACE_OUTLINE : 0 - 16
 	// LEFT_EYEBROW : 17 - 21
@@ -66,7 +81,9 @@ function draw() {
 
 	var wink2 = map(eyeRight, 1, 3, 100, 300);
 	fill(wink2-120, wink2+120, 250);
-	ellipse(position.x+35, position.y, 15, 15);
+	ellipse(position.x+30, position.y, 15, 15);
+
+	
 
 	
 
