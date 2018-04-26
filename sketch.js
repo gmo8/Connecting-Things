@@ -31,7 +31,7 @@ function setup() {
 }
 
 function draw() {
-	  background(66, 244, 161);
+	  background(244, 112, 65);
 	  
 	  image(bat, 5, 230, 170, 170);
 	  image(dog, 50, 400, 170, 170);
@@ -41,8 +41,8 @@ function draw() {
 	  image(hill, 370, 120, 170, 170);
 	  image(wolf, 172, 90, 170, 170);
 
-	  text('What is consciousness?', 200, 350, 400, 600);
-	  textSize(20)
+	  text('What is consciousness?', 170, 350, 400, 600);
+	  textSize(27)
 	  textStyle(ITALIC);
 
 	  fill(1);
@@ -76,11 +76,11 @@ function draw() {
 	//ellipse(position.x, position.y, 100, 100);
 
 	var wink = map(eyeLeft, 1, 3, 100, 300);
-	fill(wink-120, wink+120, 250);
+	fill(wink-230, wink+230, 250);
 	ellipse(position.x, position.y, 15, 15);
 
 	var wink2 = map(eyeRight, 1, 3, 100, 300);
-	fill(wink2-120, wink2+120, 250);
+	fill(wink2-200, wink2+200, 250);
 	ellipse(position.x+30, position.y, 15, 15);
 
 	
